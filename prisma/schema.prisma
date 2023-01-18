@@ -1,0 +1,38 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id         Int         @id @default(autoincrement())
+  createdAt  DateTime    @default(now())
+  updatedAt  DateTime    @updatedAt
+  email      String      @unique
+  userID     String
+  nodeUrl    String      @unique
+  password   String
+  userStatus userStatus?
+}
+
+model WorkCase {
+  id           Int          @id @default(autoincrement())
+  createdAt    DateTime     @default(now())
+  updatedAt    DateTime     @updatedAt
+  privateKey_1 String?
+  privateKey_2 String?
+  isCaseOpen   Boolean
+  price        Decimal
+  userStatus   userStatus[] @relation("WorkCaseTouserStatus")
+}
+
+model userStatus {
+  id        Int        @id @default(autoincrement())
+  isReferee Boolean
+  userId    Int        @unique
+  user      User       @relation(fields: [userId], references: [id])
+  workCase  WorkCase[] @relation("WorkCaseTouserStatus")
+}
