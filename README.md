@@ -1,2 +1,2 @@
 Merhaba,
-Bu benim metamask, solana apilerini tanımak ve bunları birleştirirken bir yandan nest.ts ve postgresql üzerinde denemek için yaptığum bir uygulama. Benim için bir oyun alanı da diyebiliriz. Eklemek istediğiniz bir şey olursa issue bırakırsanız çok sevinirim. Daha sonra bu proje üstünden aws çalışmaları yapacağım ve Flutter önyüzünü de yazacağım. Deneme tahtası olduğundan kodları istediğim kadar clean olmayabilir ama bir strandartın altına düşmeyeceğini düşünüyorum, ekleme yapmak isteyen arkadaşlar bana ulaşabilir.
+Bu benim solana ekosistemi için yaptığım projenin back-end ayağı, yardım etmek isteyenler fikirlerini issue olarak bırakarak yardımcı olabilir.
